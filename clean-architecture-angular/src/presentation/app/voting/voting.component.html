@@ -1,0 +1,31 @@
+<div class="containers">
+    <ng-container *ngIf="!isError">
+      <div class="vote-wrapper" [ngStyle]="{'background-image': 'url(' + dataJsonContent.entry_background.background_img + ')', 'height': !dataJsonContent.is_show_percentage ? '100vh' : 'auto'}">
+        <div class="vote-wrapper__top">
+          <img src={{dataJsonContent.entry_header.banner_img}} alt="dua lipa" class="vote-wrapper__icon">
+          <div class="vote-wrapper__title">
+             {{dataJsonContent.entry_header.description}}
+          </div>
+          <div class="vote-wrapper__white-box" *ngIf="!isEndPeriode">
+            {{ dataJsonContent.entry_header.remaining_label}} : <span class="vote-wrapper__count"> {{daysRemaining}} {{ dataJsonContent.entry_header.remaining_end_label}}</span>
+          </div>
+          <div class="vote-wrapper__white-box" *ngIf="isEndPeriode">
+            <div class="vote-wrapper__end">
+              {{ dataJsonContent.end_voting_header.remaining_label}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-container *ngIf="!isEndPeriode">
+        <div class="vote-wrapper__bottom" *ngFor="let vote of dataNominateVote">
+          <div class="vote-wrapper__bottom-item">
+            {{vote.title}}
+          </div>
+          <div class="vote-wrapper__bottom-card">
+            <app-card [cardData]="vote.nominations"(voteNominate)="goToDetailPage(vote.category_code, $event)"></app-card>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+  

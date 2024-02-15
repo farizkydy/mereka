@@ -1,0 +1,23 @@
+.halo-detail {
+    &__content {
+      &-image {
+        img {
+         width: 100%;
+         
+        }
+      }
+      
+      &-wrapper {
+        
+      }
+      
+      &-platform {
+        padding: 10px;
+        
+        &__title {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  
