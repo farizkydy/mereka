@@ -8,13 +8,13 @@ import { VotingComponent } from './voting/voting.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    VotingComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CoreModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
