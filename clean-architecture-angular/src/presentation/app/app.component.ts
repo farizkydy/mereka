@@ -1,25 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { GetJsonContentVotingUsecase } from 'src/@core/usecase/usecase/voting/get-json-content-voting.usecase';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'clean-architecture-angular';
-
-  constructor(
-    private getJsonContentVotingUsecase: GetJsonContentVotingUsecase
-  ) {}
-
-  ngOnInit(): void {
-    this.getJsonContent()
-  }
-
-  getJsonContent() {
-    this.getJsonContentVotingUsecase.execute().subscribe((res) => {
-      console.log('res', res);
-    })
-  }
 }

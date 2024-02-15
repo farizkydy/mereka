@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { from, Observable, of } from "rxjs";
-import { GetDetailNominateVoteResponse, GetListNominateVoteResponse, VotingJsonResponse } from "../../../@core/domain/voting.entity";
+import { GetDetailNominateVoteResponse, GetListNominateVoteResponse, GetListPrecentageVoteResponse, VotingJsonResponse } from "../../../@core/domain/voting.entity";
 import { VotingRepository } from "../../../@core/repository/voting.repository";
 
 @Injectable({
@@ -247,6 +247,42 @@ export class VotingMock extends VotingRepository {
   }
 
     return of(mock);
+  }
+
+  GetPercentageVote(): Observable<GetListPrecentageVoteResponse> {
+    const mock = {
+      "status": true,
+      "status_code": "00000",
+      "status_desc": "Successfully get data",
+      "data": [
+        {
+          "id": "KD1-HAAS",
+          "name": "Happy Asmara",
+          "percentage": 8
+        },
+        {
+          "id": "KD1-DECA",
+          "name": "Denny Caknan",
+          "percentage": 25
+        },
+        {
+          "id": "KD2-NEKH",
+          "name": "Nella Kharisma",
+          "percentage": 50
+        },
+        {
+          "id": "KD2-GHYO",
+          "name": "Ghea Youbi",
+          "percentage": 7
+        },
+        {
+          "id": "KD2-LEKE",
+          "name": "Lesti Kejora",
+          "percentage": 10
+        }
+      ]
+    }
+    return of(mock)
   }
 
 }

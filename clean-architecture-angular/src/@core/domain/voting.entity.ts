@@ -159,4 +159,16 @@ export interface VotingJsonResponse {
     id: string;
   }
   
+  export interface GetListPrecentageVoteResponse {
+    status:      boolean;
+    status_code: string;
+    status_desc: string;
+    data:        GetListPrecentageVote[];
+  }
   
+  export interface GetListPrecentageVote {
+    id:         string;
+    name:       string;
+    image?: string;
+    percentage: number;
+  }

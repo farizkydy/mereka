@@ -6,7 +6,9 @@ import { VotingComponent } from './voting.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    VotingComponent
+  ],
   // this imports can use standalone concept. so we only use it in components if we use latest angular version
   imports: [
     CommonModule,

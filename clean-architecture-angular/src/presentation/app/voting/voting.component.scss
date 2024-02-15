@@ -1,0 +1,109 @@
+.containers {
+    .vote-wrapper {
+      @apply bg-no-repeat bg-cover bg-center h-auto py-5 px-4;
+      // background-image: url('~assets/images/bg-vote.jpeg');
+      
+      &-top {
+        @apply pb-5;
+        // border-bottom: 1px solid white;
+        
+        .icon {
+          @apply w-full object-cover;
+        }
+  
+        .title {
+          @apply text-primary-tselWhite font-poppins-bold text-f-16 m-4;
+        }
+  
+        .white-box {
+          @apply bg-primary-tselWhite flex p-3 rounded-xl mt-3 mb-6 font-poppins-medium text-f-14;
+  
+          .count {
+            @apply font-poppins-bold ml-2;
+          }
+  
+          .end {
+            @apply font-poppins-bold text-primary-tselRed;
+          }
+        }
+      }
+  
+      &-bottom {
+        &-item {
+          @apply text-primary-tselWhite text-f-16 font-poppins-bold;
+          border-bottom: 1px solid white;
+        }
+  
+        
+      }
+  
+      .wrapper-bottom {
+        @apply bg-primary-tselWhite p-5 rounded-2xl my-5 opacity-80;
+  
+        .content {
+          @apply flex;
+  
+          .title {
+            @apply font-poppins-bold text-f-16;
+          }
+        }
+  
+        .vote-result {
+          @apply my-5;
+          .nominate {
+            @apply text-left font-poppins-bold text-f-12 mb-1 flex;
+  
+            .choice {
+              @apply text-secondary-tselGreen text-f-12 font-poppins-medium ml-1;
+            }
+          }
+  
+          .result-bar {
+            @apply flex relative;
+            &-number {
+              @apply flex justify-between font-poppins-medium text-f-12 text-primary-tselGrey100 bg-primary-tselGrey40 rounded-20 h-7 text-left;
+              // min-width: 20%;
+  
+              &-con {
+                @apply my-1 mx-4;
+              }
+            }
+  
+            &-img {
+              @apply relative;
+              img {
+                @apply relative rounded-full max-h-7 object-cover;
+                max-width: 1.75rem;
+                height: 30px;
+                width: 30px;
+              }
+             
+            }
+          }
+        }
+      }
+  
+      .white-box {
+        @apply bg-primary-tselWhite flex p-3 rounded-xl mt-3 mb-6 font-poppins-medium text-f-14;
+  
+        &-container {
+          @apply flex ml-2;
+  
+          .icon {
+            height: 40px;
+            width: 40px;
+          }
+          .label {
+            @apply ml-2 font-poppins-regular text-f-12;
+          }
+        }
+  
+        .chevron {
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+  
+    
+  }

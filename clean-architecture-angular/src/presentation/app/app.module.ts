@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CoreModule } from 'src/data/core.module';
@@ -14,7 +15,8 @@ import { VotingComponent } from './voting/voting.component';
     BrowserModule,
     AppRoutingModule,
     CoreModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
