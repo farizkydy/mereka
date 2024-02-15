@@ -172,3 +172,9 @@ export interface VotingJsonResponse {
     image?: string;
     percentage: number;
   }
+
+  export interface CardData {
+    image: string;
+    nomination_name: string;
+    title_nomination: string
+  }

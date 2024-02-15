@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryNomination, GetListPrecentageVote, VotingJson } from 'src/@core/domain/voting.entity';
+import { Router } from '@angular/router';
+import { CategoryNomination, GetDetailNominateVote, GetListPrecentageVote, VotingJson } from 'src/@core/domain/voting.entity';
 import { GetJsonContentVotingUsecase } from 'src/@core/usecase/usecase/voting/get-json-content-voting.usecase';
 import { GetListNominateVotingUsecase } from 'src/@core/usecase/usecase/voting/get-list-nominate-vote.usecase';
 import { GetPercentageVotingUsecase } from 'src/@core/usecase/usecase/voting/get-percentage-vote.usecase';
@@ -22,6 +23,7 @@ export class VotingComponent implements OnInit {
     private getJsonContentVotingUsecase: GetJsonContentVotingUsecase,
     private getListNominateVotingUsecase: GetListNominateVotingUsecase,
     private getPercentageVoteUseCase: GetPercentageVotingUsecase,
+    private route: Router
   ) {}
 
   ngOnInit(): void {
@@ -81,6 +83,10 @@ export class VotingComponent implements OnInit {
     // Menghitung berapa hari tersisa
     this.daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
 
+  }
+
+  goToDetailPage(categoryId: string, e: any) {
+    this.route.navigate([`nomination-list/${this.dataJsonContent.event_code}/detail/${categoryId}/${e.nomination_code}`]);
   }
 
 }

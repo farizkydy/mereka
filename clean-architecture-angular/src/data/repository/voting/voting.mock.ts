@@ -12,7 +12,7 @@ export class VotingMock extends VotingRepository {
     const mock =  {
       "status": true,
       "message": "Successfully get data",
-      "end_date": "20-10-2023",
+      "end_date": "20-10-2024",
       "data": {
         "Categories": [
           {
@@ -174,7 +174,7 @@ export class VotingMock extends VotingRepository {
       "message": "Success",
       "status": true,
       "data": {
-          "end_date": "27-10-2023",
+          "end_date": "27-10-2024",
           "end_voting_header": {
               "giveaway_label": "Lihat Pemenang Giveaway Dangdut Awards disini",
               "remaining_label": "Masa Voting Berakhir",

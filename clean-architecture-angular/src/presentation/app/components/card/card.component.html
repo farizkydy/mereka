@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <div class="card" *ngFor="let card of cardData">
+      <div class="card-image">
+        <img [src]="card.image" alt={{card.nomination_name}}>
+      </div>
+      <div class="card-text" >
+        <div class="name">{{card.nomination_name}}</div>
+        <div class="title">{{card.title_nomination}}</div>
+      </div>
+      <div class="card-action">
+        <button class="btn-primary-submit mb-2 btn" (click)="vote(card)">Vote</button>
+        <button class="btn-secondary-submit btn" (click)="info(card)">Info</button>
+      </div>
+    </div>
+  </div>

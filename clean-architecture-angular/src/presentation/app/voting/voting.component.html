@@ -17,6 +17,17 @@
           </div>
         </div>
       </div>
+      <ng-container *ngIf="!isEndPeriode">
+        <div class="vote-wrapper-bottom" *ngFor="let vote of dataNominateVote">
+          <div class="vote-wrapper-bottom-item">
+            {{vote.title}}
+          </div>
+          <div class="vote-wrapper-bottom-card">
+    
+            <app-card [cardData]="vote.nominations"(voteNominate)="goToDetailPage(vote.category_code, $event)"></app-card>
+          </div>
+        </div>
+      </ng-container>
     </ng-container>
     
   </div>
