@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VotingComponent } from './voting/voting.component';
 import { CardComponent } from './components/card/card.component';
+import { DetailVoteComponent } from './pages/detail-vote/detail-vote.component';
 
 @NgModule({
   declarations: [

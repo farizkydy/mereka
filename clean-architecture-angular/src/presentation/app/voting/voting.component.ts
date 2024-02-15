@@ -86,7 +86,7 @@ export class VotingComponent implements OnInit {
   }
 
   goToDetailPage(categoryId: string, e: any) {
-    this.route.navigate([`nomination-list/${this.dataJsonContent.event_code}/detail/${categoryId}/${e.nomination_code}`]);
+    this.route.navigate([`detail/${categoryId}/${e.nomination_code}`]);
   }
 
 }

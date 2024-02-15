@@ -17,7 +17,11 @@ import { CardComponent } from '../components/card/card.component';
     RouterModule.forChild([
       { path: '', 
         component: VotingComponent 
-      }
+      },
+      {
+        path: 'detail',
+        loadChildren: () => import('../pages/detail-vote/detail-vote.module').then(m => m.DetailVoteModule)
+      },
     ]),
   ]
 })
